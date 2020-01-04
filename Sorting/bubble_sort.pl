@@ -10,7 +10,7 @@ sub bubble_sort {
     my ($arr) = @_;
 
     # Multiple way to get size of array in Perl
-    # 1. scalar(@{$arr})
+    # 1. scalar( @{$arr} )  => Standard way
     # 2. $#$arr + 1  => $#arr will return the last index of array, hence adding 1 to get the actual size
     my $size    = scalar( @{$arr} );
     my $swapped = 1;
