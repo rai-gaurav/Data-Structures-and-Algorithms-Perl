@@ -1,4 +1,4 @@
-#!/usr/bin/env perl 
+#!/usr/bin/env perl
 # https://en.wikipedia.org/wiki/Bubble_sort
 # Bubble sort complexity is O(n^2) if we use 2 loops, iterating over each and every element even if
 # the array is sorted. It can be optimized by stopping the algorithm if inner loop didn’t cause any swap.
@@ -10,7 +10,7 @@ sub bubble_sort {
     my ($arr) = @_;
 
     # Multiple way to get size of array in Perl
-    # 1. scalar( @{$arr} )  => Standard way
+    # 1. scalar(@{$arr})  => Standard way
     # 2. $#$arr + 1  => $#arr will return the last index of array, hence adding 1 to get the actual size
     my $size    = scalar(@{$arr});
     my $swapped = 1;
