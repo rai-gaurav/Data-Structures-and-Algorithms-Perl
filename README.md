@@ -27,6 +27,6 @@ Data structure and algorithms using Perl5
 | Bubble Sort | Completed
 | Heap Sort |
 | Insertion Sort | Completed
-| Merge Sort |
-| Quick Sort |
+| Merge Sort | Completed
+| Quick Sort | Completed
 | Selection Sort |
