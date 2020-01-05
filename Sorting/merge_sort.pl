@@ -71,7 +71,7 @@ my $size  = scalar(@array);
 print "\nUnsorted array is: ";
 print_array(\@array);
 
-merge_sort(\@array, 0, $size - 1);
+merge_sort(\@array);
 
 print "\nSorted array is: ";
 print_array(\@array);
