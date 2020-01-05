@@ -40,8 +40,8 @@ sub merge_sort {
     my ($arr) = @_;
     if (scalar(@{$arr}) > 1) {
 
-		# Divide the array recursively into two halves until it can no more be divided,
-		# each containing 1 element
+        # Divide the array recursively into two halves until it can no more be divided,
+        # each containing 1 element
         my $mid   = int(scalar(@{$arr}) / 2);
         my @left  = @{$arr}[0 .. ($mid - 1)];
         my @right = @{$arr}[$mid .. $#{$arr}];
