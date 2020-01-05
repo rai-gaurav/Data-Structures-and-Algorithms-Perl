@@ -36,7 +36,7 @@ my $size  = scalar(@array);
 print "\nUnsorted array is: ";
 print_array(\@array);
 
-selection_sort(\@array, 0, $size - 1);
+selection_sort(\@array);
 
 print "\nSorted array is: ";
 print_array(\@array);
