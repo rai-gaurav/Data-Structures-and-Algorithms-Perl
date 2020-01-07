@@ -67,7 +67,6 @@ sub print_array {
 }
 
 my @array = (5, 1, 4, 2, 8, 3, 10);
-my $size  = scalar(@array);
 print "\nUnsorted array is: ";
 print_array(\@array);
 
