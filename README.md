@@ -1,10 +1,9 @@
 # Data-Structures-and-Algorithms-Perl
-Data structure and algorithms using Perl5
+Data structure and algorithms using Perl5.
 
 | Data Structure |	Status | 
 | -------------- | ------- |
-| Arrays |	
-| Binary Tree |	
+| Arrays |
 | Hashes |	
 | Linked List |	
 | Queue |	
@@ -12,21 +11,43 @@ Data structure and algorithms using Perl5
 
 | Graph | Status |
 | ----- | ------ |
+| Bellman-Ford Algorithm 	|
 | Breadth First Search 	| 
 | Depth First Search 	|
 | Dijkstra Algorithm 	|
-| Bellman-Ford Algorithm 	|
+
+| Recursion | Status |
+| --------- | ------ |
+| Fibonaaci Series |
+| Tower Of Hanoi |
 
 | Searching | Status |
 | --------- | ------ |
-| Binary Search |
-| Fibonaaci Search |
+| Binary Search | Completed |
+| Fibonaaci Search | Completed |
+| Hash Table Search |
+| Interpolation Search |
+| Jump Search | Completed |
+| Linear Search | Completed |
 
 | Sorting | Status |
 | ------- | ------ |
 | Bubble Sort | Completed
-| Heap Sort |
+| Bucket Sort |
+| Comb Sort |
+| Counting Sort |
+| Heap Sort | Completed
 | Insertion Sort | Completed
 | Merge Sort | Completed
 | Quick Sort | Completed
-| Selection Sort |
+| Radix Sort |
+| Selection Sort | Completed
+| Shell Sort |
+
+| Tree | Status |
+| ---- | ------ |
+| AVL Tree |
+| Binary Search Tree |
+| Heap |
+| Red Black Tree |
+| Spanning Tree |
