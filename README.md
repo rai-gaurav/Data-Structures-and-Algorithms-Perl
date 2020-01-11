@@ -26,16 +26,17 @@ Data structure and algorithms using Perl5.
 | Binary Search | Completed |
 | Fibonaaci Search | Completed |
 | Hash Table Search |
-| Interpolation Search |
+| Interpolation Search | Completed |
 | Jump Search | Completed |
 | Linear Search | Completed |
+| Ternary Search | Completed |
 
 | Sorting | Status |
 | ------- | ------ |
 | Bubble Sort | Completed
 | Bucket Sort |
 | Comb Sort |
-| Counting Sort |
+| Counting Sort | Completed |
 | Heap Sort | Completed
 | Insertion Sort | Completed
 | Merge Sort | Completed
