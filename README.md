@@ -33,8 +33,8 @@ Data structure and algorithms using Perl5.
 
 | Sorting | Status |
 | ------- | ------ |
-| Bubble Sort | Completed
-| Bucket Sort |
+| Bubble Sort | Completed |
+| Bucket Sort | Completed |
 | Comb Sort |
 | Counting Sort | Completed |
 | Heap Sort | Completed
