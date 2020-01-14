@@ -37,12 +37,12 @@ Data structure and algorithms using Perl5.
 | Bucket Sort | Completed |
 | Comb Sort |
 | Counting Sort | Completed |
-| Heap Sort | Completed
-| Insertion Sort | Completed
-| Merge Sort | Completed
-| Quick Sort | Completed
-| Radix Sort |
-| Selection Sort | Completed
+| Heap Sort | Completed |
+| Insertion Sort | Completed |
+| Merge Sort | Completed |
+| Quick Sort | Completed |
+| Radix Sort | Completed |
+| Selection Sort | Completed |
 | Shell Sort |
 
 | Tree | Status |
