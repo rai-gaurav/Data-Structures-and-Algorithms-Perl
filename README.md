@@ -25,7 +25,7 @@ Data structure and algorithms using Perl5.
 | --------- | ------ |
 | Binary Search | Completed |
 | Fibonaaci Search | Completed |
-| Hash Table Search |
+| Exponential Search | Completed |
 | Interpolation Search | Completed |
 | Jump Search | Completed |
 | Linear Search | Completed |
