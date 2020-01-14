@@ -1,12 +1,15 @@
+# Complexity of Sorting Algorithms
+
 | Algorithm | Best Case | Worst Case | Avg. Case |
-| Bubble Sort |
+| --------- | --------- | ---------- | --------- | 
+| Bubble Sort | n | n^2 | n^2 |
 | Bucket Sort |
-| Comb Sort |
+| Comb Sort | nlogn | n^2 | n^2 |
 | Counting Sort |
-| Heap Sort |
-| Insertion Sort  |
-| Merge Sort |
-| Quick Sort |
+| Heap Sort | n | nlogn | nlogn |
+| Insertion Sort | n | n^2 | n^2 |
+| Merge Sort | nlogn | nlogn | nlogn |
+| Quick Sort | nlogn | n^2 | nlogn |
 | Radix Sort |
-| Selection Sort |
-| Shell Sort |
+| Selection Sort | n^2 | n^2 | n^2 |
+| Shell Sort | nlogn | 
