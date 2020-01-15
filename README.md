@@ -3,8 +3,8 @@ Data structure and algorithms using Perl5.
 
 | Data Structure |	Status | 
 | -------------- | ------- |
-| Arrays |
-| Hashes |	
+| Arrays | Completed |
+| Hashes | Completed |
 | Linked List |	
 | Queue |	
 | Stack |	
