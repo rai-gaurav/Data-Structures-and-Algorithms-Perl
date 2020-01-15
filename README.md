@@ -18,8 +18,8 @@ Data structure and algorithms using Perl5.
 
 | Recursion | Status |
 | --------- | ------ |
-| Fibonaaci Series |
-| Tower Of Hanoi |
+| Fibonaaci Series | Completed |
+| Tower Of Hanoi | Completed |
 
 | Searching | Status |
 | --------- | ------ |
