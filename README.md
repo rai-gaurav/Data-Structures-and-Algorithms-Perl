@@ -6,8 +6,8 @@ Data structure and algorithms using Perl5.
 | Arrays | Completed |
 | Hashes | Completed |
 | Linked List |	
-| Queue |	
-| Stack |	
+| <ul><li>Queue</li></ul><ul><li>Circular Queue</li></ul><ul><li>Double Ended Queue</li></ul> |	
+| Stack |	Completed |
 
 | Graph | Status |
 | ----- | ------ |
