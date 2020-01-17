@@ -6,8 +6,8 @@ Data structure and algorithms using Perl5.
 | Arrays | Completed |
 | Hashes | Completed |
 | Linked List |	
-| Queue |	
-| Stack |	
+| <ul><li>Queue</li></ul><ul><li>Circular Queue</li></ul><ul><li>Double Ended Queue</li></ul> |	
+| Stack |	Completed |
 
 | Graph | Status |
 | ----- | ------ |
@@ -35,7 +35,7 @@ Data structure and algorithms using Perl5.
 | ------- | ------ |
 | Bubble Sort | Completed |
 | Bucket Sort | Completed |
-| Comb Sort |
+| Comb Sort | Completed |
 | Counting Sort | Completed |
 | Heap Sort | Completed |
 | Insertion Sort | Completed |
@@ -43,7 +43,7 @@ Data structure and algorithms using Perl5.
 | Quick Sort | Completed |
 | Radix Sort | Completed |
 | Selection Sort | Completed |
-| Shell Sort |
+| Shell Sort | Completed |
 
 | Tree | Status |
 | ---- | ------ |
