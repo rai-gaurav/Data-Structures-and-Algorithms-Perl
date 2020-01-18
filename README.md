@@ -1,12 +1,14 @@
 # Data-Structures-and-Algorithms-Perl
-Data structure and algorithms using Perl5.
+### Data structure and algorithms using Perl5.
+#### Tested on both Windows and Linux platform.
+#### Perl version - 5.30 but hopefully will work on older version too without any issue.
 
 | Data Structure |	Status | 
 | -------------- | ------- |
 | Arrays | Completed |
 | Hashes | Completed |
 | Linked List |	
-| <ul><li>Queue</li></ul><ul><li>Circular Queue</li></ul><ul><li>Double Ended Queue</li></ul> |	
+| <ul><li>Queue</li></ul><ul><li>Circular Queue</li></ul><ul><li>Double Ended Queue</li></ul> |	Completed |
 | Stack |	Completed |
 
 | Graph | Status |
