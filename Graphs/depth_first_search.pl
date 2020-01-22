@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 # https://en.wikipedia.org/wiki/Depth-first_search
+# DFS algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph)
+# and explores as far as possible along each branch before backtracking. 
 
 package Graph;
 use strict;
@@ -10,7 +12,6 @@ sub new {
     my $self = bless {}, $class;
     $self->{graph} = [];
     return $self;
-
 }
 
 sub add_edge {
@@ -47,6 +48,7 @@ sub depth_first_search {
 }
 
 package main;
+# Creating the object of Graph class
 my $graph = Graph->new();
 $graph->add_edge(0, 1);
 $graph->add_edge(0, 2);
