@@ -14,8 +14,8 @@
 | Graph | Status |
 | ----- | ------ |
 | Bellman-Ford Algorithm 	|
-| Breadth First Search 	| 
-| Depth First Search 	|
+| Breadth First Search 	| Completed |
+| Depth First Search 	| Completed |
 | Dijkstra Algorithm 	|
 
 | Recursion | Status |
