@@ -4,6 +4,7 @@
 #### Perl version - 5.30 but hopefully will work on older version too without any issue.
 
 | Backtracking | Status |
+| ------------ | ------ |
 | 8 Queens Problem | 
 | Combinations |
 | Permutations |
