@@ -42,9 +42,9 @@ sub print_list {
 sub insert_beginning {
     my ($new_node) = @_;
 
-# Do a deep copy. 2 ways to do it:
-# 1. Using 'Storable' 'dclone' function which is part of perl core - https://metacpan.org/pod/Storable
-# 2. Using 'Clone' - https://metacpan.org/pod/Clone
+    # Do a deep copy. 2 ways to do it:
+    # 1. Using 'Storable' 'dclone' function which is part of perl core - https://metacpan.org/pod/Storable
+    # 2. Using 'Clone' - https://metacpan.org/pod/Clone
     $new_node->{next} = dclone \%linked_list;
     %linked_list = %{$new_node};
 }
@@ -58,7 +58,9 @@ $linked_list{next} = $second;
 $second->{next}    = $third;
 
 print_list(\%linked_list);
+
 my $new_node = Node->new(10);
 print "\nInserting a node to the beginning...";
 insert_beginning($new_node);
+
 print_list(\%linked_list);
