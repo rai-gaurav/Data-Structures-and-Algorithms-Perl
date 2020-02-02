@@ -1,7 +1,9 @@
 # Data-Structures-and-Algorithms-Perl
-### Data structure and algorithms using Perl5.
-#### Tested on both Windows and Linux platform.
-#### Perl version - 5.30 but hopefully will work on older version too without any issue.
+### Data structure and algorithms using Perl.
+#### Tested on both Windows(Strawberry) and Linux platform.
+#### Perl version - 5.30 but hopefully will work on older version too(as old as 5.10) without any issue as Perl put a lot focus on backward compatibility.
+
+<b> Inspiration</b> - https://github.com/TheAlgorithms
 
 | Backtracking | Status |
 | ------------ | ------ |
