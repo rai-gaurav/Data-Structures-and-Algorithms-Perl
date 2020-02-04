@@ -63,3 +63,14 @@
 | Heap |
 | Red Black Tree |
 | Spanning Tree |
+
+| Conversions | Status |
+| ----------- | ------ |
+| Decimal > Binary | 
+| Deciaml -> HexaDec |
+| Decimal -> Octal |
+| Roman -> Integer |
+
+| Project Euler | Status |
+| ------------- | ------ |
+| Problem 1 |
