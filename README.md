@@ -8,7 +8,7 @@
 | Backtracking | Status |
 | ------------ | ------ |
 | 8 Queens Problem | 
-| Combinations |
+| Combinations | Completed |
 | Permutations |
 
 | Data Structure |	Status | 
