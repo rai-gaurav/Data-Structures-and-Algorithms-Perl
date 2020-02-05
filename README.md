@@ -66,11 +66,12 @@
 
 | Conversions | Status |
 | ----------- | ------ |
-| Decimal > Binary | 
+| Decimal -> Binary | 
 | Deciaml -> HexaDec |
 | Decimal -> Octal |
 | Roman -> Integer |
 
 | Project Euler | Status |
 | ------------- | ------ |
-| Problem 1 |
+| Problem 1 | Completed |
+| Problem 2 | Completed |
