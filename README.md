@@ -68,7 +68,7 @@
 | ----------- | ------ |
 | Decimal -> Binary | Completed |
 | Deciaml -> HexaDec | Completed |
-| Decimal -> Octal |
+| Decimal -> Octal | Completed |
 | Roman -> Integer |
 
 | Project Euler | Status |
