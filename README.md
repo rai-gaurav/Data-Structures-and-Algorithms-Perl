@@ -66,8 +66,8 @@
 
 | Conversions | Status |
 | ----------- | ------ |
-| Decimal -> Binary | 
-| Deciaml -> HexaDec |
+| Decimal -> Binary | Completed |
+| Deciaml -> HexaDec | Completed |
 | Decimal -> Octal |
 | Roman -> Integer |
 
