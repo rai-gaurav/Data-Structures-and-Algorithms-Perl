@@ -28,14 +28,14 @@ sub roman_to_decimal {
             my $next_char = $rom_sym_val{$chars[$index + 1]};
 
             if ($current_char >= $next_char) {
-				# If current value of character is greater than or equal to the value of next character,
-				# then add this value to the running total. e.g. we got MD or DL or VI or LI etc
+                # If current value of character is greater than or equal to the value of next character,
+                # then add this value to the running total. e.g. we got MD or DL or VI or LI etc
                 $decimal_num = $decimal_num + $current_char;
                 $index++;
             }
             else {
-				# If current value of character is less than the value of next character, then subtract this
-				# value by adding the value of next symbol to the running total. e.g. we got CM or IV or XD or CD etc
+                # If current value of character is less than the value of next character, then subtract this
+                # value by adding the value of next symbol to the running total. e.g. we got CM or IV or XD or CD etc
                 $decimal_num = $decimal_num + $next_char - $current_char;
                 $index       = $index + 2;
             }
