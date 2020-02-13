@@ -10,6 +10,21 @@
 | 8 Queens Problem | 
 | Combinations | Completed |
 | Permutations |
+| Sudoku |
+
+| Cryptography/Ciphers | Status |
+| -------------------- | ------ |
+| Base16 |
+| Base32 |
+| Base64 |
+| Caesar Cipher |
+| Morse Code |
+| RSA |
+
+| Compression | Status |
+| ----------- | ------ |
+| Burrows Wheeler |
+| Huffman |
 
 | Data Structure |	Status | 
 | -------------- | ------- |
