@@ -67,9 +67,13 @@
 | Conversions | Status |
 | ----------- | ------ |
 | Decimal -> Binary | Completed |
-| Deciaml -> HexaDec | Completed |
+| Binary -> Decimal | Completed |
+| Decimal -> HexaDec | Completed |
+| HexaDec -> Decimal | Completed |
 | Decimal -> Octal | Completed |
+| Octal -> Decimal | 
 | Roman -> Integer | Completed |
+| Integer -> Roman | 
 
 | Project Euler | Status |
 | ------------- | ------ |
