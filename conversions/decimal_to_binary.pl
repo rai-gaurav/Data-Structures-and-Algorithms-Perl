@@ -27,6 +27,6 @@ sub decimal_to_binary_2 {
 
 }
 
-print(decimal_to_binary_1(9));
+print(decimal_to_binary_1(9));         # 1001
 print("\n");
-print(decimal_to_binary_2(9));
+print(decimal_to_binary_2(9));         # 1001
