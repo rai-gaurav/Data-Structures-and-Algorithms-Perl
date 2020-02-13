@@ -71,7 +71,7 @@
 | Decimal -> HexaDec | Completed |
 | HexaDec -> Decimal | Completed |
 | Decimal -> Octal | Completed |
-| Octal -> Decimal | 
+| Octal -> Decimal | Completed |
 | Roman -> Integer | Completed |
 | Integer -> Roman | 
 
