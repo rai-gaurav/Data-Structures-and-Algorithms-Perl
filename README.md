@@ -88,7 +88,7 @@
 | Decimal -> Octal | Completed |
 | Octal -> Decimal | Completed |
 | Roman -> Integer | Completed |
-| Integer -> Roman | 
+| Integer -> Roman | Completed |
 
 | Project Euler | Status |
 | ------------- | ------ |
