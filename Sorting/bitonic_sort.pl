@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 # This fuction will return as sorted sequence of integers.
-# 'up' if true(1) will sort in ascending order otherwise descending
+# 'up' if true(1) will sort in ascending order otherwise descending(0)
 sub bitonic_sort {
     my ($arr, $up) = @_;
 
@@ -15,8 +15,9 @@ sub bitonic_sort {
         return $arr;
     }
     else {
-        # Creating a bitonic sequence from 2 slices of array
-        my $first  = bitonic_sort([@{$arr}[0 .. int($size / 2) - 1]],     1);
+        # Creating a bitonic sequence from 2 slices of array 
+		# one of them will be in ascending, other will be descending
+        my $first  = bitonic_sort([@{$arr}[0 .. int($size / 2) - 1]], 1);
         my $second = bitonic_sort([@{$arr}[int($size / 2) .. $size - 1]], 0);
         
         # Merge two bitonic sequence slices
@@ -34,7 +35,7 @@ sub bitonic_merge {
     }
     else {
         bitonic_compare($arr, $up);
-        my $first  = bitonic_merge([@{$arr}[0 .. int($size / 2) - 1]],     $up);
+        my $first  = bitonic_merge([@{$arr}[0 .. int($size / 2) - 1]], $up);
         my $second = bitonic_merge([@{$arr}[int($size / 2) .. $size - 1]], $up);
         return ([@{$first}, @{$second}]);
     }

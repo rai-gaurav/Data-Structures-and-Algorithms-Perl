@@ -58,7 +58,7 @@
 
 | Sorting | Status |
 | ------- | ------ |
-| Bitonic Sort |
+| Bitonic Sort | Completed |
 | Bubble Sort | Completed |
 | Bucket Sort | Completed |
 | Comb Sort | Completed |
