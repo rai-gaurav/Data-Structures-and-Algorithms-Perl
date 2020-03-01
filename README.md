@@ -14,7 +14,7 @@
 
 | Cryptography/Ciphers | Status |
 | -------------------- | ------ |
-| Base16 |
+| Base16 | Completed |
 | Base32 |
 | Base64 |
 | Caesar Cipher |
