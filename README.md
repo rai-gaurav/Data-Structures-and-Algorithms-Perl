@@ -15,8 +15,8 @@
 | Cryptography/Ciphers | Status |
 | -------------------- | ------ |
 | Base16 | Completed |
-| Base32 |
-| Base64 |
+| Base32 | Completed |
+| Base64 | Completed |
 | Caesar Cipher |
 | Morse Code |
 | RSA |
