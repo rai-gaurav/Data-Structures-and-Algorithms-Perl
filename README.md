@@ -9,7 +9,7 @@
 | ------------ | ------ |
 | 8 Queens Problem | 
 | Combinations | Completed |
-| Permutations |
+| Permutations | Completed |
 | Sudoku |
 
 | Cryptography/Ciphers | Status |
