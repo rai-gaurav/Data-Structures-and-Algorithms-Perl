@@ -17,7 +17,7 @@
 | Base16 | Completed |
 | Base32 | Completed |
 | Base64 | Completed |
-| Caesar Cipher |
+| Caesar Cipher | Completed |
 | Morse Code |
 | RSA |
 
