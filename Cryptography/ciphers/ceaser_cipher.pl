@@ -1,10 +1,8 @@
 #!/usr/bin/env perl
 # https://en.wikipedia.org/wiki/Caesar_cipher
 
-
 use strict;
 use warnings;
-use MIME::Base64;
 
 sub ceaser_cipher {
     my ($text, $shift, $decrypt) = @_;
@@ -21,6 +19,7 @@ sub ceaser_cipher {
 
         # Check for uppercase char. If you have unicode character
         # write it as -> $str =~ /\p{Uppercase}/
+        # https://perldoc.perl.org/functions/chr.html
         if ($character =~ /[A-Z]/) {
             $result = $result . chr(($asciinum + $shift - 65) % 26 + 65);
         }
@@ -32,12 +31,12 @@ sub ceaser_cipher {
 }
 
 sub main {
-    my $text_to_encrypt = "ATTACKATONCX";
+    my $text_to_encrypt = "XTEADCKSTZNQX";
     my $shift           = 4;
     my $encrypted_text  = ceaser_cipher($text_to_encrypt, $shift);
-    print "\n" . $encrypted_text;
+    print "\nAfter Encryption: " . $encrypted_text;
     my $decrypted_text = ceaser_cipher($encrypted_text, $shift, 'decrypt');
-    print "\n" . $decrypted_text;
+    print "\nAfter Decryption: " . $decrypted_text;
 }
 
 main();
