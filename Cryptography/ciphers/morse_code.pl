@@ -5,42 +5,42 @@ use strict;
 use warnings;
 
 my %morse_code = (
-    "A" => ".-",
-    "B" => "-...",
-    "C" => "-.-.",
-    "D" => "-..",
-    "E" => ".",
-    "F" => "..-.",
-    "G" => "--.",
-    "H" => "....",
-    "I" => "..",
-    "J" => ".---",
-    "K" => "-.-",
-    "L" => ".-..",
-    "M" => "--",
-    "N" => "-.",
-    "O" => "---",
-    "P" => ".--.",
-    "Q" => "--.-",
-    "R" => ".-.",
-    "S" => "...",
-    "T" => "-",
-    "U" => "..-",
-    "V" => "...-",
-    "W" => ".--",
-    "X" => "-..-",
-    "Y" => "-.--",
-    "Z" => "--..",
-    "1" => ".----",
-    "2" => "..---",
-    "3" => "...--",
-    "4" => "....-",
-    "5" => ".....",
-    "6" => "-....",
-    "7" => "--...",
-    "8" => "---..",
-    "9" => "----.",
-    "0" => "-----",
+    "A"  => ".-",
+    "B"  => "-...",
+    "C"  => "-.-.",
+    "D"  => "-..",
+    "E"  => ".",
+    "F"  => "..-.",
+    "G"  => "--.",
+    "H"  => "....",
+    "I"  => "..",
+    "J"  => ".---",
+    "K"  => "-.-",
+    "L"  => ".-..",
+    "M"  => "--",
+    "N"  => "-.",
+    "O"  => "---",
+    "P"  => ".--.",
+    "Q"  => "--.-",
+    "R"  => ".-.",
+    "S"  => "...",
+    "T"  => "-",
+    "U"  => "..-",
+    "V"  => "...-",
+    "W"  => ".--",
+    "X"  => "-..-",
+    "Y"  => "-.--",
+    "Z"  => "--..",
+    "1"  => ".----",
+    "2"  => "..---",
+    "3"  => "...--",
+    "4"  => "....-",
+    "5"  => ".....",
+    "6"  => "-....",
+    "7"  => "--...",
+    "8"  => "---..",
+    "9"  => "----.",
+    "0"  => "-----",
     ", " => "--..--",
     "."  => ".-.-.-",
     "?"  => "..--..",
@@ -73,8 +73,9 @@ sub convert_to_morse {
 }
 
 sub convert_from_morse {
-    my ($message)  = @_;
-	# We will have space seperated encrypted message 
+    my ($message) = @_;
+
+    # We will have space seperated encrypted message
     my @characters = split(/ /, $message);
     my $result     = "";
     foreach my $character (@characters) {
@@ -95,9 +96,10 @@ sub convert_from_morse {
 }
 
 sub main {
-    my $message              = "Perl - The Swiss Army chainsaw of scripting languages";
-	# There is no distinction between upper and lower case letters in morse code. 
-	# Hence, converting all to uppercase
+    my $message = "Perl - The Swiss Army chainsaw of scripting languages";
+
+    # There is no distinction between upper and lower case letters in morse code.
+    # Hence, converting all to uppercase
     my $encrypted_morse_code = convert_to_morse(uc($message));
     print "\nEncrypted: " . $encrypted_morse_code;
     my $decrypted_morse_code = convert_from_morse($encrypted_morse_code);
