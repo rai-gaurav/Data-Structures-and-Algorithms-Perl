@@ -17,9 +17,13 @@
 | Base16 | Completed |
 | Base32 | Completed |
 | Base64 | Completed |
+| Base85 | 
 | Caesar Cipher | Completed |
+| Hill Cipher | 
 | Morse Code | Completed |
+| Playfair Cipher |
 | RSA |
+| Vigenere Cipher |
 
 | Compression | Status |
 | ----------- | ------ |
