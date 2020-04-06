@@ -30,6 +30,17 @@
 | Burrows Wheeler |
 | Huffman |
 
+| Conversions | Status |
+| ----------- | ------ |
+| Decimal -> Binary | Completed |
+| Binary -> Decimal | Completed |
+| Decimal -> HexaDec | Completed |
+| HexaDec -> Decimal | Completed |
+| Decimal -> Octal | Completed |
+| Octal -> Decimal | Completed |
+| Roman -> Integer | Completed |
+| Integer -> Roman | Completed |
+
 | Data Structure |	Status | 
 | -------------- | ------- |
 | Arrays | Completed |
@@ -82,17 +93,6 @@
 | Heap |
 | Red Black Tree |
 | Spanning Tree |
-
-| Conversions | Status |
-| ----------- | ------ |
-| Decimal -> Binary | Completed |
-| Binary -> Decimal | Completed |
-| Decimal -> HexaDec | Completed |
-| HexaDec -> Decimal | Completed |
-| Decimal -> Octal | Completed |
-| Octal -> Decimal | Completed |
-| Roman -> Integer | Completed |
-| Integer -> Roman | Completed |
 
 | Project Euler | Status |
 | ------------- | ------ |
