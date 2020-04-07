@@ -15,16 +15,31 @@
 | Cryptography/Ciphers | Status |
 | -------------------- | ------ |
 | Base16 | Completed |
-| Base32 |
-| Base64 |
-| Caesar Cipher |
-| Morse Code |
+| Base32 | Completed |
+| Base64 | Completed |
+| Base85 | Completed |
+| Caesar Cipher | Completed |
+| Hill Cipher | 
+| Morse Code | Completed |
+| Playfair Cipher |
 | RSA |
+| Vigenere Cipher |
 
 | Compression | Status |
 | ----------- | ------ |
 | Burrows Wheeler |
 | Huffman |
+
+| Conversions | Status |
+| ----------- | ------ |
+| Decimal -> Binary | Completed |
+| Binary -> Decimal | Completed |
+| Decimal -> HexaDec | Completed |
+| HexaDec -> Decimal | Completed |
+| Decimal -> Octal | Completed |
+| Octal -> Decimal | Completed |
+| Roman -> Integer | Completed |
+| Integer -> Roman | Completed |
 
 | Data Structure |	Status | 
 | -------------- | ------- |
@@ -78,17 +93,6 @@
 | Heap |
 | Red Black Tree |
 | Spanning Tree |
-
-| Conversions | Status |
-| ----------- | ------ |
-| Decimal -> Binary | Completed |
-| Binary -> Decimal | Completed |
-| Decimal -> HexaDec | Completed |
-| HexaDec -> Decimal | Completed |
-| Decimal -> Octal | Completed |
-| Octal -> Decimal | Completed |
-| Roman -> Integer | Completed |
-| Integer -> Roman | Completed |
 
 | Project Euler | Status |
 | ------------- | ------ |
