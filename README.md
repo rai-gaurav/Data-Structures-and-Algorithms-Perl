@@ -23,7 +23,7 @@
 | Morse Code | Completed |
 | Playfair Cipher |
 | RSA |
-| Vigenere Cipher |
+| Vigenere Cipher | Completed |
 
 | Compression | Status |
 | ----------- | ------ |
