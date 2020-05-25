@@ -1,4 +1,3 @@
-
 #!/usr/bin/env perl
 # https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 # https://simple.wikipedia.org/wiki/RSA_algorithm
