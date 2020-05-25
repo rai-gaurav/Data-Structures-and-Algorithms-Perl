@@ -22,7 +22,7 @@
 | Hill Cipher | 
 | Morse Code | Completed |
 | Playfair Cipher |
-| RSA |
+| RSA | Completed |
 | Vigenere Cipher | Completed |
 
 | Compression | Status |
