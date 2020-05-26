@@ -1,6 +1,8 @@
 # Data-Structures-and-Algorithms-Perl
 ### Data structure and algorithms using Perl.
 #### Tested on both Windows(Strawberry) and Linux platform.
+https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/.github/workflows/workflow.yml/badge.svg
+
 <b> Perl version - 5.30</b> but hopefully will work on older version too (as old as 5.10) without any issue as Perl put a lot focus on backward compatibility.
 
 <b> Inspiration</b> - https://github.com/TheAlgorithms
