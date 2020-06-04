@@ -33,6 +33,8 @@ jobs:
       run: perl -v
 
     # Runs a set of commands using the runners shell
-    - name: Run all the scripts
+    - name: Get all the scripts
       shell: bash
-      run: find . -iname *.pl | perl
+      run: echo '::set-output name=files::find . -iname *.pl'
+    - name: Run all the scripts
+      run: perl $files
