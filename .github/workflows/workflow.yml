@@ -34,7 +34,4 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Get all the scripts
-      shell: bash
-      run: echo '::set-output name=files::find . -iname *.pl'
-    - name: Run all the scripts
-      run: perl $files
+      run: perl Backtracking/*.pl
