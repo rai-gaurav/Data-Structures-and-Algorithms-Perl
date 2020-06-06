@@ -33,8 +33,10 @@ jobs:
       run: perl -v
 
     - name: Install Dependencies
-      run: curl -L https://cpanmin.us | perl - MIME::Base32
-
+      run: |
+        curl -L https://cpanmin.us | perl - MIME::Base32
+        curl -L https://cpanmin.us | perl - Convert::Base85
+  
     # Runs a set of commands using the runners shell
     - name: Get all the scripts
       shell: bash
