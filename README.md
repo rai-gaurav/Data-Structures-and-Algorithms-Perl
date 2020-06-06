@@ -1,7 +1,9 @@
 # Data-Structures-and-Algorithms-Perl
 ### Data structure and algorithms using Perl.
 #### Tested on both Windows(Strawberry) and Linux platform.
-[![Actions Status](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/CI/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
+[![Actions Status](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/linux_workflow/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
+[![Actions Status](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/mac_workflow/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
+[![Actions Status](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/windows_workflow/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
 
 <b> Perl version - 5.30</b> but hopefully will work on older version too (as old as 5.10) without any issue as Perl put a lot focus on backward compatibility.
 
