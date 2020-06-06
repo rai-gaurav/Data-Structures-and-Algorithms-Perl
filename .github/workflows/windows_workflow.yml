@@ -1,0 +1,104 @@
+name: Windows_CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install and setup Perl
+        run: |
+          choco install strawberryperl
+          echo "##[add-path]C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin"
+    
+    # Runs a single command using the runners shell
+    - name: Check perl version
+      run: perl -v
+
+    - name: Install Dependencies
+      run: |
+        curl -L https://cpanmin.us | perl - MIME::Base32
+        curl -L https://cpanmin.us | perl - Readonly
+        curl -L https://cpanmin.us | perl - Convert::Base85
+  
+    # Runs a set of commands using the runners shell
+    - name: Run Backtracking scripts
+      run: |
+        perl Backtracking/combinations.pl
+        perl Backtracking/permutations.pl
+    - name: Run Conversions scripts
+      run: |    
+        perl Conversions/binary_to_decimal.pl
+        perl Conversions/decimal_to_binary.pl
+        perl Conversions/decimal_to_hexadecimal.pl
+        perl Conversions/decimal_to_octal.pl
+        perl Conversions/hexadecimal_to_decimal.pl
+        perl Conversions/integer_to_roman.pl
+        perl Conversions/octal_to_decimal.pl
+        perl Conversions/roman_to_integer.pl
+    - name: Run Cryptography scripts
+      run: |   
+        perl Cryptography/ciphers/base16.pl
+        perl Cryptography/ciphers/base32.pl
+        perl Cryptography/ciphers/base64.pl
+        perl Cryptography/ciphers/base85.pl
+        perl Cryptography/ciphers/ceaser_cipher.pl
+        perl Cryptography/ciphers/morse_code.pl
+        perl Cryptography/ciphers/rsa.pl
+        perl Cryptography/ciphers/vigenere_cipher.pl
+    - name: Run Data-Structures scripts
+      run: |   
+        perl Data-Structures/arrays/array.pl
+        perl Data-Structures/hashes/hash.pl
+        perl Data-Structures/queue/circular_queue.pl
+        perl Data-Structures/queue/double_ended_queue.pl
+        perl Data-Structures/queue/queue.pl
+        perl Data-Structures/stack/stack.pl
+    - name: Run Graphs scripts
+      run: | 
+        perl Graphs/breadth_first_search.pl
+        perl Graphs/depth_first_search.pl
+    - name: Run Recursion scripts
+      run: | 
+        perl Recursion/fibonacci_number.pl
+        perl Recursion/tower_of_hanoi.pl
+    - name: Run Searching scripts
+      run: | 
+        perl Searching/binary_search.pl
+        perl Searching/exponential_search.pl
+        perl Searching/fibonacci_search.pl
+        perl Searching/interpolation_search.pl
+        perl Searching/jump_search.pl
+        perl Searching/linear_search.pl
+        perl Searching/ternary_search.pl
+    - name: Run Sorting scripts
+      run: |
+        perl Sorting/bitonic_sort.pl
+        perl Sorting/bubble_sort.pl
+        perl Sorting/bucket_sort.pl
+        perl Sorting/comb_sort.pl
+        perl Sorting/counting_sort.pl
+        perl Sorting/heap_sort.pl
+        perl Sorting/insertion_sort.pl
+        perl Sorting/merge_sort.pl
+        perl Sorting/quick_sort.pl
+        perl Sorting/radix_sort.pl
+        perl Sorting/selection_sort.pl
+        perl Sorting/shell_sort.pl
+    - name: Run project_euler scripts
+      run: |
+        perl project_euler/problem_1/solution1.pl
+        perl project_euler/problem_2/solution1.pl
+        perl project_euler/problem_3/solution1.pl
