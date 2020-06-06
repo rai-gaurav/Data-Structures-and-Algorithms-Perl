@@ -35,4 +35,61 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Get all the scripts
       shell: bash
-      run: find . -iname *.pl | perl 
+      run: |
+        perl Backtracking/combinations.pl
+        perl Backtracking/permutations.pl
+        perl Conversions/binary_to_decimal.pl
+        perl Conversions/decimal_to_binary.pl
+        perl Conversions/decimal_to_hexadecimal.pl
+        perl Conversions/decimal_to_octal.pl
+        perl Conversions/hexadecimal_to_decimal.pl
+        perl Conversions/integer_to_roman.pl
+        perl Conversions/octal_to_decimal.pl
+        perl Conversions/roman_to_integer.pl
+        perl Cryptography/ciphers/base16.pl
+        perl Cryptography/ciphers/base32.pl
+        perl Cryptography/ciphers/base64.pl
+        perl Cryptography/ciphers/base85.pl
+        perl Cryptography/ciphers/ceaser_cipher.pl
+        perl Cryptography/ciphers/morse_code.pl
+        perl Cryptography/ciphers/rsa.pl
+        perl Cryptography/ciphers/vigenere_cipher.pl
+        perl Data-Structures/arrays/array.pl
+        perl Data-Structures/hashes/hash.pl
+        perl Data-Structures/queue/circular_queue.pl
+        perl Data-Structures/queue/double_ended_queue.pl
+        perl Data-Structures/queue/queue.pl
+        perl Data-Structures/stack/stack.pl
+        perl Graphs/breadth_first_search.pl
+        perl Graphs/depth_first_search.pl
+        perl Recursion/fibonacci_number.pl
+        perl Recursion/tower_of_hanoi.pl
+        perl Searching/binary_search.pl
+        perl Searching/exponential_search.pl
+        perl Searching/fibonacci_search.pl
+        perl Searching/interpolation_search.pl
+        perl Searching/jump_search.pl
+        perl Searching/linear_search.pl
+        perl Searching/ternary_search.pl
+        perl Sorting/bitonic_sort.pl
+        perl Sorting/bubble_sort.pl
+        perl Sorting/bucket_sort.pl
+        perl Sorting/comb_sort.pl
+        perl Sorting/counting_sort.pl
+        perl Sorting/heap_sort.pl
+        perl Sorting/insertion_sort.pl
+        perl Sorting/merge_sort.pl
+        perl Sorting/quick_sort.pl
+        perl Sorting/radix_sort.pl
+        perl Sorting/selection_sort.pl
+        perl Sorting/shell_sort.pl
+        perl project_euler/problem_1/solution1.pl
+        perl project_euler/problem_2/solution1.pl
+        perl project_euler/problem_3/solution1.pl
+
+
+
+
+        
+
+
