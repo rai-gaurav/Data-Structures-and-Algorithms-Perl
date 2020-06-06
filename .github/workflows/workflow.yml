@@ -18,6 +18,10 @@ jobs:
     strategy:
       matrix:
         perl-version:
+          - '5.8'
+          - '5.10'
+          - '5.16'
+          - '5.24'
           - 'latest'
 
     container:
@@ -34,16 +38,17 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        curl -L https://cpanmin.us | perl - MIME::Base32
-        curl -L https://cpanmin.us | perl - Convert::Base85
-        curl -L https://cpanmin.us | perl - Readonly
+        curl -L https://cpanmin.us | perl - MIME::Base32 --show-build-log-on-failure
+        curl -L https://cpanmin.us | perl - Convert::Base85 --show-build-log-on-failure
+        curl -L https://cpanmin.us | perl - Readonly --show-build-log-on-failure
   
     # Runs a set of commands using the runners shell
-    - name: Get all the scripts
-      shell: bash
+    - name: Run Backtracking scripts
       run: |
         perl Backtracking/combinations.pl
         perl Backtracking/permutations.pl
+    - name: Run Conversions scripts
+      run: |    
         perl Conversions/binary_to_decimal.pl
         perl Conversions/decimal_to_binary.pl
         perl Conversions/decimal_to_hexadecimal.pl
@@ -52,6 +57,8 @@ jobs:
         perl Conversions/integer_to_roman.pl
         perl Conversions/octal_to_decimal.pl
         perl Conversions/roman_to_integer.pl
+    - name: Run Cryptography scripts
+      run: |   
         perl Cryptography/ciphers/base16.pl
         perl Cryptography/ciphers/base32.pl
         perl Cryptography/ciphers/base64.pl
@@ -60,16 +67,24 @@ jobs:
         perl Cryptography/ciphers/morse_code.pl
         perl Cryptography/ciphers/rsa.pl
         perl Cryptography/ciphers/vigenere_cipher.pl
+    - name: Run Data-Structures scripts
+      run: |   
         perl Data-Structures/arrays/array.pl
         perl Data-Structures/hashes/hash.pl
         perl Data-Structures/queue/circular_queue.pl
         perl Data-Structures/queue/double_ended_queue.pl
         perl Data-Structures/queue/queue.pl
         perl Data-Structures/stack/stack.pl
+    - name: Run Graphs scripts
+      run: | 
         perl Graphs/breadth_first_search.pl
         perl Graphs/depth_first_search.pl
+    - name: Run Recursion scripts
+      run: | 
         perl Recursion/fibonacci_number.pl
         perl Recursion/tower_of_hanoi.pl
+    - name: Run Searching scripts
+      run: | 
         perl Searching/binary_search.pl
         perl Searching/exponential_search.pl
         perl Searching/fibonacci_search.pl
@@ -77,6 +92,8 @@ jobs:
         perl Searching/jump_search.pl
         perl Searching/linear_search.pl
         perl Searching/ternary_search.pl
+    - name: Run Sorting scripts
+      run: |
         perl Sorting/bitonic_sort.pl
         perl Sorting/bubble_sort.pl
         perl Sorting/bucket_sort.pl
@@ -89,6 +106,8 @@ jobs:
         perl Sorting/radix_sort.pl
         perl Sorting/selection_sort.pl
         perl Sorting/shell_sort.pl
+    - name: Run project_euler scripts
+      run: |
         perl project_euler/problem_1/solution1.pl
         perl project_euler/problem_2/solution1.pl
         perl project_euler/problem_3/solution1.pl
