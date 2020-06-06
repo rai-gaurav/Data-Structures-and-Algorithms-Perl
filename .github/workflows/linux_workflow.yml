@@ -4,7 +4,8 @@ name: Linux_CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    paths: 
+    - '**.pl'
   pull_request:
     branches: [ master ]
 
