@@ -32,6 +32,9 @@ jobs:
     - name: Check perl version
       run: perl -v
 
+    - name: Install Dependencies
+      run: curl -L https://cpanmin.us | perl - MIME::Base32
+
     # Runs a set of commands using the runners shell
     - name: Get all the scripts
       shell: bash
