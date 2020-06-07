@@ -4,8 +4,7 @@ name: Linux_CI
 # events but only for the master branch
 on:
   push:
-    paths: 
-    - '**.pl'
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -43,7 +42,7 @@ jobs:
         curl -L https://cpanmin.us | perl - Readonly --show-build-log-on-failure
         
     - name: Install only for specific perl version
-      if: ${{ matrix.perl-version }} >= 5.16
+      if: ${{ matrix.perl-version }} >= '5.16'
       run: curl -L https://cpanmin.us | perl - Convert::Base85 --show-build-log-on-failure
   
     # Runs a set of commands using the runners shell
