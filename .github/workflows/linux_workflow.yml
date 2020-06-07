@@ -4,7 +4,8 @@ name: Linux_CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    paths: 
+    - '**.pl'
   pull_request:
     branches: [ master ]
 
@@ -18,7 +19,8 @@ jobs:
     strategy:
       matrix:
         perl-version:
-          - '5.10'
+          - '5.16'
+          - '5.24'
           - 'latest'
 
     container:
@@ -35,15 +37,9 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        curl -L https://cpanmin.us | perl - MIME::Base32 --show-build-log-on-failure
-        curl -L https://cpanmin.us | perl - Readonly --show-build-log-on-failure
-        
-    - name: Install only for specific perl version
-      run: |
-        perl_version=`perl -e "print $^V"`
-        if [ $perl_version -ge 'v5.16' ]; then
-            curl -L https://cpanmin.us | perl - Convert::Base85 --show-build-log-on-failure
-        fi
+        curl -L https://cpanmin.us | perl - MIME::Base32
+        curl -L https://cpanmin.us | perl - Readonly
+        curl -L https://cpanmin.us | perl - Convert::Base85
   
     # Runs a set of commands using the runners shell
     - name: Run Backtracking scripts
@@ -69,9 +65,7 @@ jobs:
         perl Cryptography/ciphers/morse_code.pl
         perl Cryptography/ciphers/rsa.pl
         perl Cryptography/ciphers/vigenere_cipher.pl
-    - name: Run Some Cryptography scripts For higher version of perl only
-      if: ${{ matrix.perl-version }} >= 5.16
-      run: perl Cryptography/ciphers/base85.pl
+        perl Cryptography/ciphers/base85.pl
     - name: Run Data-Structures scripts
       run: |   
         perl Data-Structures/arrays/array.pl
