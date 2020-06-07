@@ -104,3 +104,4 @@ jobs:
         perl project_euler/problem_2/solution1.pl
         perl project_euler/problem_3/solution1.pl
         perl project_euler/problem_4/solution1.pl
+        perl project_euler/problem_5/solution1.pl
