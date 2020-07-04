@@ -37,6 +37,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
+        curl -L https://cpanmin.us | perl - File::Find::Rule
         curl -L https://cpanmin.us | perl - MIME::Base32
         curl -L https://cpanmin.us | perl - Readonly
         curl -L https://cpanmin.us | perl - Convert::Base85
