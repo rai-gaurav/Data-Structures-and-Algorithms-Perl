@@ -110,3 +110,4 @@
 | Problem 5     | Completed |
 | Problem 6     | Completed |
 | Problem 7     | Completed |
+| Problem 8     | Completed |
