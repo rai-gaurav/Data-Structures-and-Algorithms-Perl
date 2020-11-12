@@ -14,23 +14,18 @@
 
 | Backtracking     | Status    |
 | ---------------- | --------- |
-| 8 Queens Problem |
+| 8 Queens Problem | 
 | Combinations     | Completed |
 | Permutations     | Completed |
-| Sudoku           |
+| Sudoku           | 
 
-| Cryptography/Ciphers | Status    |
-| -------------------- | --------- |
-| Base16               | Completed |
-| Base32               | Completed |
-| Base64               | Completed |
-| Base85               | Completed |
-| Caesar Cipher        | Completed |
-| Hill Cipher          |
-| Morse Code           | Completed |
-| Playfair Cipher      |
-| RSA                  | Completed |
-| Vigenere Cipher      | Completed |
+| Blockchain | Status |
+| ---------- | ------ |
+| chinese_remainder_theorem | Completed |
+
+| Client_Server | Status |
+| ------------- | ------ |
+| Client Server example | Completed |
 
 | Compression     | Status |
 | --------------- | ------ |
@@ -47,6 +42,19 @@
 | Octal -> Decimal   | Completed |
 | Roman -> Integer   | Completed |
 | Integer -> Roman   | Completed |
+
+| Cryptography/Ciphers | Status    |
+| -------------------- | --------- |
+| Base16               | Completed |
+| Base32               | Completed |
+| Base64               | Completed |
+| Base85               | Completed |
+| Caesar Cipher        | Completed |
+| Hill Cipher          |
+| Morse Code           | Completed |
+| Playfair Cipher      |
+| RSA                  | Completed |
+| Vigenere Cipher      | Completed |
 
 | Data Structure                                                                              | Status    |
 | ------------------------------------------------------------------------------------------- | --------- |
@@ -111,3 +119,10 @@
 | Problem 6     | Completed |
 | Problem 7     | Completed |
 | Problem 8     | Completed |
+
+| Web Programming | Status    |
+| --------------- | --------- |
+| Catalyst        |
+| Dancer2         |
+| Mojolicious     |
+| Web Crawling    |
