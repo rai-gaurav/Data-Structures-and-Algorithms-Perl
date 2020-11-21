@@ -8,10 +8,12 @@
 [![](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/Mac_CI/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
 [![](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/Windows_CI/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions) &nbsp;
 
-![](https://img.shields.io/github/repo-size/rai-gaurav/Data-Structures-and-Algorithms-Perl.svg?label=Repo%20size&style=flat)
-[![Code Formatter: perltidy](https://img.shields.io/static/v1?label=code%20formatter&message=perltidy&color=blue&style=flat)](https://github.com/perltidy/perltidy)
-[![Code Analysis: perlcritic](https://img.shields.io/static/v1?label=code%20analysis&message=perlcritic&color=blue&style=flat)](https://github.com/Perl-Critic/Perl-Critic)
+![](https://img.shields.io/github/repo-size/rai-gaurav/Data-Structures-and-Algorithms-Perl.svg?label=Repo%20size&style=flat) 
+![](https://img.shields.io/coveralls/github/badges/shields.svg?style=flat)
 ![](https://img.shields.io/github/license/rai-gaurav/Data-Structures-and-Algorithms-Perl) &nbsp;
+
+[![Code Formatter: perltidy](https://img.shields.io/static/v1?label=code%20formatter&message=perltidy&color=blue&style=flat)](https://github.com/perltidy/perltidy)
+[![Code Analysis: perlcritic](https://img.shields.io/static/v1?label=code%20analysis&message=perlcritic&color=blue&style=flat)](https://github.com/Perl-Critic/Perl-Critic) &nbsp;
 
 [![Tested on Perl - 5.30](https://img.shields.io/badge/Tested%20-Perl%205.30-blue.svg?logo=perl&style=flat)](https://www.perl.org) &nbsp;
 
