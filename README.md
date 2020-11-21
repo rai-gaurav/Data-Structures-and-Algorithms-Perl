@@ -17,7 +17,7 @@
 
 [![Tested on Perl - 5.30](https://img.shields.io/badge/Tested%20-Perl%205.30-blue.svg?logo=perl&style=flat)](https://www.perl.org) &nbsp;
 
-Hopefully will work on older version too (as old as 5.10) and on diferent OS without any issue as Perl put a lot focus on backward compatibility.
+Hopefully will work on older version too (as old as 5.10) and across diferent OSs without any issue as Perl put a lot focus on backward compatibility.
 
 <b> Inspiration</b> - https://github.com/TheAlgorithms
 
