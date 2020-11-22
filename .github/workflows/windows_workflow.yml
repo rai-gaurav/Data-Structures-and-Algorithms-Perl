@@ -22,7 +22,7 @@ jobs:
     - name: Install and setup Perl
       run: |
           choco install strawberryperl
-          echo "##[add-path]C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin"
+          echo "C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin" >> $GITHUB_PATH
     
     # Runs a single command using the runners shell
     - name: Check perl version
