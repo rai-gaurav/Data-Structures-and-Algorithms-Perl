@@ -8,7 +8,7 @@
 [![](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/Mac_CI/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions)
 [![](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/workflows/Windows_CI/badge.svg)](https://github.com/rai-gaurav/Data-Structures-and-Algorithms-Perl/actions) &nbsp;
 
-![](https://img.shields.io/github/repo-size/rai-gaurav/Data-Structures-and-Algorithms-Perl.svg?label=Repo%20size&style=flat) 
+![](https://img.shields.io/github/repo-size/rai-gaurav/Data-Structures-and-Algorithms-Perl.svg?label=Repo%20size&style=flat)
 ![](https://img.shields.io/coveralls/github/badges/shields.svg?style=flat)
 ![](https://img.shields.io/github/license/rai-gaurav/Data-Structures-and-Algorithms-Perl) &nbsp;
 
@@ -23,17 +23,17 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 
 | Backtracking     | Status    |
 | ---------------- | --------- |
-| 8 Queens Problem | 
+| 8 Queens Problem |
 | Combinations     | Completed |
 | Permutations     | Completed |
-| Sudoku           | 
+| Sudoku           |
 
-| Blockchain | Status |
-| ---------- | ------ |
+| Blockchain                | Status    |
+| ------------------------- | --------- |
 | chinese_remainder_theorem | Completed |
 
-| Client_Server | Status |
-| ------------- | ------ |
+| Client_Server         | Status    |
+| --------------------- | --------- |
 | Client Server example | Completed |
 
 | Compression     | Status |
@@ -129,9 +129,12 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Problem 7     | Completed |
 | Problem 8     | Completed |
 
-| Web Programming | Status    |
-| --------------- | --------- |
-| Catalyst        |
-| Dancer2         |
-| Mojolicious     |
-| Web Crawling    |
+| Web Programming    | Status    |
+| ------------------ | --------- |
+| Catalyst           |
+| Dancer2            |
+| Mojolicious        |
+| Web Crawling       |
+| Currency Converter | Completed |
+| Weather            |
+| Stock Price        |
