@@ -136,5 +136,5 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Mojolicious        |
 | Web Crawling       |
 | Currency Converter | Completed |
-| Weather            |
+| Weather            | Completed |
 | Stock Price        |
