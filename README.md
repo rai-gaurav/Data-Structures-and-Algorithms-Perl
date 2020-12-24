@@ -129,11 +129,11 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Problem 7     | Completed |
 | Problem 8     | Completed |
 
-| Web Programming    | Status    |
-| ------------------ | --------- |
-| Catalyst           |
-| Dancer2            |
-| Mojolicious        |
-| Web Crawling <ul><li>Stock Price LWP</li></ul><ul><li>Stock Price Mechanize</li></ul>        |
-| Currency Converter | Completed |
-| Weather            | Completed |
+| Web Programming                                                                                                         | Status    |
+| ----------------------------------------------------------------------------------------------------------------------- | --------- |
+| Catalyst                                                                                                                |
+| Dancer2                                                                                                                 |
+| Mojolicious                                                                                                             |
+| Web Crawling <ul><li>Stock Price LWP</li></ul><ul><li>Stock Price Mechanize</li></ul><ul><li>Stock Price Mojo</li></ul> | Completed |
+| Currency Converter <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                    | Completed |
+| Weather <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                               | Completed |
