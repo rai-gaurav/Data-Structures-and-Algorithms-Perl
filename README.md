@@ -134,7 +134,6 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Catalyst           |
 | Dancer2            |
 | Mojolicious        |
-| Web Crawling       |
+| Web Crawling <ul><li>Stock Price LWP</li></ul><ul><li>Stock Price Mechanize</li></ul>        |
 | Currency Converter | Completed |
 | Weather            | Completed |
-| Stock Price        |
