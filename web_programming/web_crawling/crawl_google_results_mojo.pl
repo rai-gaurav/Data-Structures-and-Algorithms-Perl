@@ -43,7 +43,6 @@ sub main {
     my $ua          = Mojo::UserAgent->new;
 
     $ua->transactor->name('Mozilla/5.0');
-    $ua->insecure(1);
 
     crawl_results ($ua, $url);
 }

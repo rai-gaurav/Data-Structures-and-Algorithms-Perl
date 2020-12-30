@@ -49,7 +49,7 @@ sub main {
     my $search_text = "Perl";
     my $url         = "https://www.google.com/search?q=" . $search_text;
 
-    my $ua = LWP::UserAgent->new(ssl_opts => {verify_hostname => 0});
+    my $ua = LWP::UserAgent->new();
     $ua->show_progress(1);
 
     $ua->agent('Mozilla/5.0');
