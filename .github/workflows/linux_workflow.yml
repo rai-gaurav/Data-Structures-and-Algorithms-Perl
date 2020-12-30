@@ -41,6 +41,9 @@ jobs:
         curl -L https://cpanmin.us | perl - MIME::Base32
         curl -L https://cpanmin.us | perl - Readonly
         curl -L https://cpanmin.us | perl - Convert::Base85
+        curl -L https://cpanmin.us | perl - LWP::UserAgent
+        curl -L https://cpanmin.us | perl - WWW::Mechanize
+        curl -L https://cpanmin.us | perl - Mojo::UserAgent
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
