@@ -35,7 +35,7 @@ sub get_data {
         return $response->body;
     }
     else {
-        croak $response->status_line;
+        croak $response->message;
     }
 }
 
