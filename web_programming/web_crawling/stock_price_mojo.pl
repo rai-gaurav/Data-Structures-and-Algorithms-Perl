@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# https://metacpan.org/pod/Mojo::Useragent
+# https://metacpan.org/pod/Mojo::UserAgent
 # https://metacpan.org/pod/Mojo::DOM
 
 use strict;

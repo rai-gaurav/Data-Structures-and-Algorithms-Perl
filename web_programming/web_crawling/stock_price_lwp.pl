@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# https://metacpan.org/pod/WWW::Mechanize
+# https://metacpan.org/pod/LWP::UserAgent
 # https://metacpan.org/pod/XML::LibXML
 
 # We can use 'HTML::TreeBuilder' or 'XML::Twig' also here for parsing HTML.
