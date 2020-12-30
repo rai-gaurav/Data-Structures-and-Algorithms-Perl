@@ -34,6 +34,9 @@ jobs:
         cpanm MIME::Base32
         cpanm Convert::Base85
         cpanm Readonly
+        cpanm LWP::UserAgent
+        cpanm WWW::Mechanize
+        cpanm Mojo::UserAgent
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
