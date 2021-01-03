@@ -35,8 +35,12 @@ jobs:
         cpanm Convert::Base85
         cpanm Readonly
         cpanm LWP::UserAgent
+        cpanm LWP::Protocol::https
         cpanm WWW::Mechanize
         cpanm Mojo::UserAgent
+        cpanm IO::Socket::SSL
+        cpanm XML::LibXML
+        cpanm Math::Prime::Util
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
