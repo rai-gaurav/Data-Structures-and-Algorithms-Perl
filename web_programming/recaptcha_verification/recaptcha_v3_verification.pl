@@ -8,7 +8,7 @@
 
 # https://metacpan.org/pod/Mojolicious
 # https://docs.mojolicious.org/Mojolicious/Lite
-# https://developers.google.com/recaptcha/docs/display
+# https://developers.google.com/recaptcha/docs/v3
 
 # This is a simple Login page. We will be authenticating user.
 # After success they will get a home page where we will be welcoming them and they can logout from there.
@@ -20,24 +20,25 @@ use Mojolicious::Lite;
 use Mojo::UserAgent;
 
 # Add your 'Secret Key' here
-$ENV{'CAPTCHA_V2_SECRET_KEY'} = "";
+$ENV{'CAPTCHA_V3_SECRET_KEY'} = "";
 
 sub is_valid_captcha {
     my ($c) = @_;
     my $ua = Mojo::UserAgent->new;
     my $param = $c->param('g-recaptcha-response');
-
     my $captcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     my $response
         = $ua->post(
-        $captcha_url => form => {response => $param, secret => $ENV{'CAPTCHA_V2_SECRET_KEY'}})
+        $captcha_url => form => {response => $param, secret => $ENV{'CAPTCHA_V3_SECRET_KEY'}})
         ->result;
     if ($response->is_success()) {
         my $out = $response->json;
-        if ($out->{success}) {
+        # reCAPTCHA v3 returns a score -> 1.0 is very likely a good interaction, 0.0 is very likely a bot
+        if ($out->{success} && $out->{score} > 0.5) {
             return 1;
         }
         else {
+            # Its a bot
             return 0;
         }
     }
@@ -113,7 +114,8 @@ __DATA__
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=Your Site Key"></script>
     </head>
     <body>
         %= t h1 => 'Login'
@@ -127,9 +129,19 @@ __DATA__
         <br /><br />
             <label>password:</label> <%= password_field 'password' %>
         <br /><br />
-            <div class="g-recaptcha" data-sitekey="<Your Site-key>"></div>
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+            <input type="hidden" name="action" value="validate_captcha">
         %= submit_button 'Log in'
         %= end
+        <script>
+            function onloadCallback() {
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('Your Site Key', {action:'validate_captcha'}).then(function(token) {
+                        document.getElementById('g-recaptcha-response').value = token;
+                    });
+                });
+            }
+        </script>
     </body>
 </html>
 

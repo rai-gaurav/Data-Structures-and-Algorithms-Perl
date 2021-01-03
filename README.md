@@ -138,3 +138,4 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Currency Converter <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                    | Completed |
 | Weather <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                               | Completed |
 | reCAPTCHA v2 | Completed |
+| reCAPTCHA v3 | Completed |
