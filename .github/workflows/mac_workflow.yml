@@ -33,8 +33,12 @@ jobs:
         curl -L https://cpanmin.us | perl - Readonly
         curl -L https://cpanmin.us | perl - Convert::Base85
         curl -L https://cpanmin.us | perl - LWP::UserAgent
+        curl -L https://cpanmin.us | perl - LWP::Protocol::https
         curl -L https://cpanmin.us | perl - WWW::Mechanize
         curl -L https://cpanmin.us | perl - Mojo::UserAgent
+        curl -L https://cpanmin.us | perl - IO::Socket::SSL
+        curl -L https://cpanmin.us | perl - XML::LibXML
+        curl -L https://cpanmin.us | perl - Math::Prime::Util
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
