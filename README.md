@@ -134,7 +134,7 @@ Hopefully will work on older version too (as old as 5.10) and across diferent OS
 | Catalyst                                                                                                                |
 | Dancer2                                                                                                                 |
 | Mojolicious                                                                                                             |
-| Web Crawling <ul><li>Crawl Google Resilts LWP</li></ul><ul><li>Crawl Google Resilts Mojo</li></ul><ul><li>Stock Price LWP</li></ul><ul><li>Stock Price Mechanize</li></ul><ul><li>Stock Price Mojo</li></ul> | Completed |
+| Web Crawling <ul><li>Google Scholar</li></ul><ul><li>Crawl Google Results LWP</li></ul><ul><li>Crawl Google Results Mojo</li></ul><ul><li>Stock Price LWP</li></ul><ul><li>Stock Price Mechanize</li></ul><ul><li>Stock Price Mojo</li></ul> | Completed |
 | Currency Converter <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                    | Completed |
 | Weather <ul><li>LWP::UserAgent</li></ul><ul><li>Mojo::UserAgent</li></ul>                                               | Completed |
 | reCAPTCHA v2 | Completed |
