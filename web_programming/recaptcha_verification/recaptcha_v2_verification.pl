@@ -40,9 +40,10 @@ sub is_valid_captcha {
             return 0;
         }
     }
-
-    # Connection to reCAPTCHA failed
-    return 0;
+    else {
+        # Connection to reCAPTCHA failed
+        return 0;
+    }
 }
 
 # https://docs.mojolicious.org/Mojolicious/Lite#Helpers
@@ -53,7 +54,9 @@ helper auth => sub {
     if (($c->param('username') eq 'admin') && ($c->param('password') eq 'admin')) {
         return 1;
     }
-    return 0;
+    else {
+        return 0;
+    }
 };
 
 helper verify_captcha => sub {
@@ -61,7 +64,9 @@ helper verify_captcha => sub {
     if (is_valid_captcha($c)) {
         return 1;
     }
-    return 0;
+    else {
+        return 0;
+    }
 };
 
 helper ua => sub {

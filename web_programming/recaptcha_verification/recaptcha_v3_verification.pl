@@ -18,7 +18,6 @@ use strict;
 use warnings;
 use Mojolicious::Lite;
 use Mojo::UserAgent;
-use Data::Dumper;
 
 # Add your 'Secret Key' here
 $ENV{'CAPTCHA_V3_SECRET_KEY'} = "";
@@ -46,9 +45,10 @@ sub is_valid_captcha {
             return 0;
         }
     }
-
-    # Connection to reCAPTCHA failed
-    return 0;
+    else {
+        # Connection to reCAPTCHA failed
+        return 0;
+    }
 }
 
 # https://docs.mojolicious.org/Mojolicious/Lite#Helpers
@@ -59,7 +59,9 @@ helper auth => sub {
     if (($c->param('username') eq 'admin') && ($c->param('password') eq 'admin')) {
         return 1;
     }
-    return 0;
+    else {
+        return 0;
+    }
 };
 
 helper ua => sub {
