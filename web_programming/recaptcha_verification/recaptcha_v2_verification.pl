@@ -20,16 +20,15 @@ use Mojolicious::Lite;
 use Mojo::UserAgent;
 
 # Add your 'Secret Key' here
-$ENV{'CAPTCHA_V2_SECRET_KEY'} = "";
+$ENV{'CAPTCHA_V2_SECRET_KEY'} = "6LeYxBsaAAAAADckp07ST4i2KTU3--4mPFVEinLE";
 
 sub is_valid_captcha {
     my ($c) = @_;
-    my $ua = Mojo::UserAgent->new;
     my $param = $c->param('g-recaptcha-response');
 
     my $captcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     my $response
-        = $ua->post(
+        = $c->ua->post(
         $captcha_url => form => {response => $param, secret => $ENV{'CAPTCHA_V2_SECRET_KEY'}})
         ->result;
     if ($response->is_success()) {
@@ -63,6 +62,14 @@ helper verify_captcha => sub {
         return 1;
     }
     return 0;
+};
+
+helper ua => sub {
+    my $ua = Mojo::UserAgent->new;
+    $ua->transactor->name(
+        'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0');
+    $ua->insecure(1);
+    return $ua;
 };
 
 # Different Routes
@@ -127,8 +134,8 @@ __DATA__
         <br /><br />
             <label>password:</label> <%= password_field 'password' %>
         <br /><br />
-            <div class="g-recaptcha" data-sitekey="<Your Site-key>"></div>
-        %= submit_button 'Log in'
+            <div class="g-recaptcha" data-sitekey="6LeYxBsaAAAAAEFYISkPQh7t5MptnN0YpkQaVNn6"></div>
+        %= submit_button 'Log in', id => 'submit'
         %= end
     </body>
 </html>

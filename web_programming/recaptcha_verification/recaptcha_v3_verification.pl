@@ -24,15 +24,18 @@ $ENV{'CAPTCHA_V3_SECRET_KEY'} = "";
 
 sub is_valid_captcha {
     my ($c) = @_;
-    my $ua = Mojo::UserAgent->new;
-    my $param = $c->param('g-recaptcha-response');
+
+    # https://docs.mojolicious.org/Mojo/Message#json
+    my $post_params = $c->req->json;
+    my $token       = $post_params->{token};
     my $captcha_url = 'https://www.google.com/recaptcha/api/siteverify';
     my $response
-        = $ua->post(
-        $captcha_url => form => {response => $param, secret => $ENV{'CAPTCHA_V3_SECRET_KEY'}})
+        = $c->ua->post(
+        $captcha_url => form => {response => $token, secret => $ENV{'CAPTCHA_V3_SECRET_KEY'}})
         ->result;
     if ($response->is_success()) {
         my $out = $response->json;
+
         # reCAPTCHA v3 returns a score -> 1.0 is very likely a good interaction, 0.0 is very likely a bot
         if ($out->{success} && $out->{score} > 0.5) {
             return 1;
@@ -58,12 +61,10 @@ helper auth => sub {
     return 0;
 };
 
-helper verify_captcha => sub {
-    my $c = shift;
-    if (is_valid_captcha($c)) {
-        return 1;
-    }
-    return 0;
+helper ua => sub {
+    my $ua = Mojo::UserAgent->new;
+    $ua->transactor->name('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0');
+    return $ua;
 };
 
 # Different Routes
@@ -72,19 +73,24 @@ get '/' => sub { shift->render } => 'index';
 post '/login' => sub {
     my $c = shift;
     if ($c->auth) {
-        if ($c->verify_captcha) {
-            $c->session(auth => 1);
-            $c->flash(username => $c->param('username'));
-            return $c->redirect_to('home');
-        }
-        else {
-            $c->flash('error' => 'Captcha verification failed');
-            $c->redirect_to('index');
-        }
+        $c->session(auth => 1);
+        $c->flash(username => $c->param('username'));
+        return $c->redirect_to('home');
     }
     $c->flash('error' => 'Wrong login/password');
     $c->redirect_to('index');
 } => 'login';
+
+post 'recaptchav3-verify' => sub {
+    my $c = shift;
+    if (is_valid_captcha($c)) {
+        return $c->render(json => {error => Mojo::JSON->false});
+    }
+    else {
+        return $c->render(
+            json => {error => Mojo::JSON->true, description => 'Captcha verification failed.'});
+    }
+};
 
 get '/logout' => sub {
     my $c = shift;
@@ -115,7 +121,7 @@ __DATA__
     <head>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=Your Site Key"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=<Your Site Key>"></script>
     </head>
     <body>
         %= t h1 => 'Login'
@@ -131,13 +137,34 @@ __DATA__
         <br /><br />
             <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
             <input type="hidden" name="action" value="validate_captcha">
-        %= submit_button 'Log in'
+        %= submit_button 'Log in', id => 'submit'
         %= end
         <script>
             function onloadCallback() {
                 grecaptcha.ready(function() {
-                    grecaptcha.execute('Your Site Key', {action:'validate_captcha'}).then(function(token) {
+                    grecaptcha.execute('<Your Site Key>', {action:'validate_captcha'})
+                    .then(function(token) {
                         document.getElementById('g-recaptcha-response').value = token;
+                        // Create an endpoint on your server to validate the token and return the score
+                        fetch('/recaptchav3-verify', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({'token': token})
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.error === true) {
+                                alert(data.description + " Bot found.");
+                            }
+                            else {
+                                console.log('reCaptcha verification : success');
+                            }
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                        });
                     });
                 });
             }
@@ -155,4 +182,3 @@ __DATA__
 @@ denied.html.ep
 %= t h2 => 'Access Denied'
 <a href="<%= url_for('index') %>">Login</a>
-
