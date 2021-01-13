@@ -41,6 +41,7 @@ jobs:
         cpanm IO::Socket::SSL
         cpanm XML::LibXML
         cpanm Math::Prime::Util
+        cpanm Firefox::Marionette
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
