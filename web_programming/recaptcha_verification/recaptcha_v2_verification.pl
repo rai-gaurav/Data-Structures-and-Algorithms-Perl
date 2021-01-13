@@ -20,7 +20,7 @@ use Mojolicious::Lite;
 use Mojo::UserAgent;
 
 # Add your 'Secret Key' here
-$ENV{'CAPTCHA_V2_SECRET_KEY'} = "6LeYxBsaAAAAADckp07ST4i2KTU3--4mPFVEinLE";
+$ENV{'CAPTCHA_V2_SECRET_KEY'} = "";
 
 sub is_valid_captcha {
     my ($c) = @_;
@@ -66,9 +66,7 @@ helper verify_captcha => sub {
 
 helper ua => sub {
     my $ua = Mojo::UserAgent->new;
-    $ua->transactor->name(
-        'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0');
-    $ua->insecure(1);
+    $ua->transactor->name('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0');
     return $ua;
 };
 
@@ -119,7 +117,6 @@ __DATA__
 @@ index.html.ep
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
@@ -134,7 +131,7 @@ __DATA__
         <br /><br />
             <label>password:</label> <%= password_field 'password' %>
         <br /><br />
-            <div class="g-recaptcha" data-sitekey="6LeYxBsaAAAAAEFYISkPQh7t5MptnN0YpkQaVNn6"></div>
+            <div class="g-recaptcha" data-sitekey="<Your Site Key>"></div>
         %= submit_button 'Log in', id => 'submit'
         %= end
     </body>
