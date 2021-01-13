@@ -28,17 +28,18 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        curl -L https://cpanmin.us | perl - File::Find::Rule
-        curl -L https://cpanmin.us | perl - MIME::Base32
-        curl -L https://cpanmin.us | perl - Readonly
-        curl -L https://cpanmin.us | perl - Convert::Base85
-        curl -L https://cpanmin.us | perl - LWP::UserAgent
-        curl -L https://cpanmin.us | perl - LWP::Protocol::https
-        curl -L https://cpanmin.us | perl - WWW::Mechanize
-        curl -L https://cpanmin.us | perl - Mojo::UserAgent
-        curl -L https://cpanmin.us | perl - IO::Socket::SSL
-        curl -L https://cpanmin.us | perl - XML::LibXML
-        curl -L https://cpanmin.us | perl - Math::Prime::Util
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n File::Find::Rule
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n MIME::Base32
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Readonly
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Convert::Base85
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n LWP::UserAgent
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n LWP::Protocol::https
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n WWW::Mechanize
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojo::UserAgent
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n IO::Socket::SSL
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n XML::LibXML
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Math::Prime::Util
+        curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Firefox::Marionette
   
     # Github action doesn't support perl shell (Duh!). Hence created a seperate script which will run all other scripts in repo.
     - name: Run All the scripts
