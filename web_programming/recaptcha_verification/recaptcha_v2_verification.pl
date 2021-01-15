@@ -22,8 +22,21 @@ use Mojo::UserAgent;
 # Add your 'Secret Key' here
 $ENV{'CAPTCHA_V2_SECRET_KEY'} = "";
 
-sub is_valid_captcha {
-    my ($c) = @_;
+# https://docs.mojolicious.org/Mojolicious/Lite#Helpers
+# Check for authentication
+helper auth => sub {
+    my $c = shift;
+
+    if (($c->param('username') eq 'admin') && ($c->param('password') eq 'admin')) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+};
+
+helper verify_captcha => sub {
+    my $c = shift;
     my $param = $c->param('g-recaptcha-response');
 
     my $captcha_url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -42,29 +55,6 @@ sub is_valid_captcha {
     }
     else {
         # Connection to reCAPTCHA failed
-        return 0;
-    }
-}
-
-# https://docs.mojolicious.org/Mojolicious/Lite#Helpers
-# Check for authentication
-helper auth => sub {
-    my $c = shift;
-
-    if (($c->param('username') eq 'admin') && ($c->param('password') eq 'admin')) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-};
-
-helper verify_captcha => sub {
-    my $c = shift;
-    if (is_valid_captcha($c)) {
-        return 1;
-    }
-    else {
         return 0;
     }
 };
@@ -104,9 +94,13 @@ get '/logout' => sub {
 # https://docs.mojolicious.org/Mojolicious/Lite#Under
 under sub {
     my $c = shift;
-    return 1 if ($c->session('auth') // '') eq '1';
+    my $auth = $c->session('auth') // '';
+    if ($auth eq '1') {
+        return 1;
+    }
 
-    $c->render('denied');
+    $c->render(template => 'denied');
+    return undef;
 };
 
 get '/home' => sub {
