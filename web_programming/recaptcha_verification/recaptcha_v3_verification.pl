@@ -84,7 +84,7 @@ post '/login' => sub {
     $c->redirect_to('index');
 } => 'login';
 
-post 'recaptchav3-verify' => sub {
+post '/recaptchav3-verify' => sub {
     my $c = shift;
     if (is_valid_captcha($c)) {
         return $c->render(json => {error => Mojo::JSON->false});
