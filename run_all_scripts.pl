@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+
 # This script just run all the scripts present in this repo and check its working or not.
 # This script will be run directly from github workflow
 
